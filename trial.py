@@ -1,0 +1,5 @@
+sample = open('./_cache/log_self.txt', 'r')
+Lines = sample.readlines()
+host_ip = (Lines[0].split(":")[0])
+host_port = (Lines[0].split(":")[1].split("\n")[0])
+sample.close()
