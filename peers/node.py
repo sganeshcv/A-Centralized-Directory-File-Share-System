@@ -8,7 +8,7 @@ parser.add_argument('--host', metavar='host', type=str, nargs = '?', default=soc
 parser.add_argument('--port', metavar='port', type=int, nargs = '?', default=9999)
 args = parser.parse_args()
 
-print("Connecting to server: {} on port {}".format(args.host,args.port))
+print("Connecting to directory: {} on port {}".format(args.host,args.port))
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sck:
     try:
@@ -51,7 +51,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sck:
                 print("\nServer responce was : {}".format(data.decode('utf-8')))
                 v = input("\nDo you wish to connect to the system? (Y/N):")
                 if v == "Y":
-                    os.system("gnome-terminal -- python3 fileClient.py")
+                    os.system("gnome-terminal -- python3 peerConnect.py")
             else:
                 data = sck.recv(1024)
                 print("\nServer responce was : {}".format(data.decode('utf-8')))
