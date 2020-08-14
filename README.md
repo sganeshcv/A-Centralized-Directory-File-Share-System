@@ -1,4 +1,4 @@
-# A-Centralized-P2P-Directory-System
+# A-Centralized-Directory-File-Share-System
 The Project consists of two main parts/process:
 The Central Directory 
 The Peers
